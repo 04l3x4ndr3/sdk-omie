@@ -2,6 +2,9 @@
 
 namespace O4l3x4ndr3\SdkOmie\Types;
 
+/**
+ *
+ */
 class OsCabecalho
 {
     /** Código de Integração da OS
@@ -16,7 +19,7 @@ class OsCabecalho
      */
     private ?int $nCodOS;
 
-    /** Número da Ordem de Serviço+
+    /** Número da Ordem de Serviço
      *
      * @var string|null
      */
@@ -30,9 +33,9 @@ class OsCabecalho
 
     /** Código do Cliente
      *
-     * @var int
+     * @var int|null
      */
-    private int $nCodCli;
+    private ?int $nCodCli;
 
     /** Data de Previsão
      *
@@ -40,7 +43,7 @@ class OsCabecalho
      */
     private ?string $dDtPrevisao;
 
-    /** Código da etapa do processo, sendo:+
+    /** Código da etapa do processo, sendo:
      *
      * @var string|null
      */
@@ -58,13 +61,13 @@ class OsCabecalho
      */
     private ?int $nQtdeParc;
 
-    /** Código da parcela/Condição de pagamento.+
+    /** Código da parcela/Condição de pagamento.
      *
      * @var string|null
      */
     private ?string $cCodParc;
 
-    /** Valor total da Ordem de Serviço.+
+    /** Valor total da Ordem de Serviço.
      *
      * @var float|null
      */
@@ -76,7 +79,7 @@ class OsCabecalho
      */
     private ?float $nValorTotalImpRet;
 
-    /** Código do Contrato.+
+    /** Código do Contrato.
      *
      * @var int|null
      */
@@ -84,25 +87,25 @@ class OsCabecalho
 
     /**
      * @param string|null $cCodIntOS
-     * @param int|null    $nCodOS
+     * @param int|null $nCodOS
      * @param string|null $cNumOS
      * @param string|null $cCodIntCli
-     * @param int         $nCodCli
+     * @param int|null $nCodCli
      * @param string|null $dDtPrevisao
      * @param string|null $cEtapa
-     * @param int|null    $nCodVend
-     * @param int|null    $nQtdeParc
+     * @param int|null $nCodVend
+     * @param int|null $nQtdeParc
      * @param string|null $cCodParc
-     * @param float|null  $nValorTotal
-     * @param float|null  $nValorTotalImpRet
-     * @param int|null    $nCodCtr
+     * @param float|null $nValorTotal
+     * @param float|null $nValorTotalImpRet
+     * @param int|null $nCodCtr
      */
     public function __construct(
         ?string $cCodIntOS = null,
         ?int $nCodOS = null,
         ?string $cNumOS = null,
         ?string $cCodIntCli = null,
-        int $nCodCli = null,
+        ?int $nCodCli = null,
         ?string $dDtPrevisao = null,
         ?string $cEtapa = null,
         ?int $nCodVend = null,
@@ -205,19 +208,18 @@ class OsCabecalho
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getNCodCli(): int
+    public function getNCodCli(): ?int
     {
         return $this->nCodCli;
     }
 
     /**
-     * @param int $nCodCli
-     *
-     * @return OsCabecalho
+     * @param int|null $nCodCli
+     * @return $this
      */
-    public function setNCodCli(int $nCodCli): OsCabecalho
+    public function setNCodCli(?int $nCodCli): OsCabecalho
     {
         $this->nCodCli = $nCodCli;
         return $this;
@@ -375,7 +377,10 @@ class OsCabecalho
         return $this;
     }
 
-    public function toArray(): array
+    /**
+     * @return array
+     */
+    public function toArray(): ?array
     {
         return array_filter([
             "cCodIntOS" => $this->cCodIntOS,
