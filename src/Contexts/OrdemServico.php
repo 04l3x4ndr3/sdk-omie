@@ -41,7 +41,7 @@ class OrdemServico extends CallApi
     }
 
     /**
-     * @param array|null $param
+     * @param OsCadastro $osCadastro
      *
      * @return object
      * @throws GuzzleException
