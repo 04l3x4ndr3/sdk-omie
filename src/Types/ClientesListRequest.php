@@ -81,9 +81,9 @@ class ClientesListRequest
 
     /** Lista de Códigos para filtro de clientes
      *
-     * @var ClientesPorCodigo|null
+     * @var array|null
      */
-    private ?ClientesPorCodigo $clientesPorCodigo;
+    private ?array $clientesPorCodigo;
 
     /** Exibe as caracteristicas do cliente
      *
@@ -101,52 +101,28 @@ class ClientesListRequest
      * @param int|null $pagina
      * @param int|null $registros_por_pagina
      * @param string|null $apenas_importado_api
-     * @param string|null $ordenar_por
-     * @param string|null $ordem_decrescente
-     * @param string|null $filtrar_por_data_de
-     * @param string|null $filtrar_por_data_ate
-     * @param string|null $filtrar_por_hora_de
-     * @param string|null $filtrar_por_hora_ate
-     * @param string|null $filtrar_apenas_inclusao
-     * @param string|null $filtrar_apenas_alteracao
-     * @param ClientesFiltro|null $clientesFiltro
-     * @param ClientesPorCodigo|null $clientesPorCodigo
-     * @param string|null $exibir_caracteristicas
-     * @param string|null $exibir_obs
      */
     public function __construct(
         ?int               $pagina = null,
         ?int               $registros_por_pagina = null,
-        ?string            $apenas_importado_api = null,
-        ?string            $ordenar_por = null,
-        ?string            $ordem_decrescente = null,
-        ?string            $filtrar_por_data_de = null,
-        ?string            $filtrar_por_data_ate = null,
-        ?string            $filtrar_por_hora_de = null,
-        ?string            $filtrar_por_hora_ate = null,
-        ?string            $filtrar_apenas_inclusao = null,
-        ?string            $filtrar_apenas_alteracao = null,
-        ?ClientesFiltro    $clientesFiltro = null,
-        ?ClientesPorCodigo $clientesPorCodigo = null,
-        ?string            $exibir_caracteristicas = null,
-        ?string            $exibir_obs = null
+        ?string            $apenas_importado_api = null
     )
     {
         $this->pagina = $pagina;
         $this->registros_por_pagina = $registros_por_pagina;
         $this->apenas_importado_api = $apenas_importado_api;
-        $this->ordenar_por = $ordenar_por;
-        $this->ordem_decrescente = $ordem_decrescente;
-        $this->filtrar_por_data_de = $filtrar_por_data_de;
-        $this->filtrar_por_data_ate = $filtrar_por_data_ate;
-        $this->filtrar_por_hora_de = $filtrar_por_hora_de;
-        $this->filtrar_por_hora_ate = $filtrar_por_hora_ate;
-        $this->filtrar_apenas_inclusao = $filtrar_apenas_inclusao;
-        $this->filtrar_apenas_alteracao = $filtrar_apenas_alteracao;
-        $this->clientesFiltro = $clientesFiltro;
-        $this->clientesPorCodigo = $clientesPorCodigo;
-        $this->exibir_caracteristicas = $exibir_caracteristicas;
-        $this->exibir_obs = $exibir_obs;
+        $this->ordenar_por = null;
+        $this->ordem_decrescente = null;
+        $this->filtrar_por_data_de = null;
+        $this->filtrar_por_data_ate = null;
+        $this->filtrar_por_hora_de = null;
+        $this->filtrar_por_hora_ate = null;
+        $this->filtrar_apenas_inclusao = null;
+        $this->filtrar_apenas_alteracao = null;
+        $this->clientesFiltro = null;
+        $this->clientesPorCodigo = null;
+        $this->exibir_caracteristicas = null;
+        $this->exibir_obs = null;
     }
 
     /**
@@ -366,20 +342,21 @@ class ClientesListRequest
     }
 
     /**
-     * @return ClientesPorCodigo|null
+     * @return array|null
      */
-    public function getClientesPorCodigo(): ?ClientesPorCodigo
+    public function getClientesPorCodigo(): ?ClientesListRequest
     {
         return $this->clientesPorCodigo;
     }
 
-    /**
-     * @param ClientesPorCodigo|null $clientesPorCodigo
-     * @return ClientesListRequest
+    /** Lista de clientesPorCodigo
+     *
+     * @param ClientesPorCodigo $clientePorCodigo
+     * @return $this
      */
-    public function setClientesPorCodigo(?ClientesPorCodigo $clientesPorCodigo): ClientesListRequest
+    public function addDepartamentos(ClientesPorCodigo $clientePorCodigo): ClientesListRequest
     {
-        $this->clientesPorCodigo = $clientesPorCodigo;
+        $this->clientesPorCodigo[] = $clientePorCodigo->toArray();
         return $this;
     }
 
