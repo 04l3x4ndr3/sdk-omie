@@ -73,7 +73,7 @@ class OsCabecalho
      */
     private ?float $nValorTotal;
 
-    /** Valor Total de Impostos Retidos
+    /** Valor Total de OsImpostos Retidos
      *
      * @var float|null
      */
