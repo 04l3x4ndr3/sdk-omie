@@ -76,13 +76,13 @@ class ClientesCadastro extends CallApi
     }
 
     /**
-     * @param \O4l3x4ndr3\SdkOmie\Types\ClientesCadastro|null $clienteCadastro
+     * @param \O4l3x4ndr3\SdkOmie\Types\ClientesCadastro|null $upsertCliente
      * @return object|array
      *
      * @throws GuzzleException
      */
-    public function upsertClienteCpfCnpj(?\O4l3x4ndr3\SdkOmie\Types\ClientesCadastro $clienteCadastro = null): object
+    public function upsertCliente(?\O4l3x4ndr3\SdkOmie\Types\ClientesCadastro $upsertCliente = null): object
     {
-        return $this->call("geral/clientes/#UpsertClienteCpfCnpj", $clienteCadastro->toArray());
+        return $this->call("geral/clientes/#UpsertCliente", $upsertCliente->toArray());
     }
 }
