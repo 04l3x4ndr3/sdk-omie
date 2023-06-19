@@ -515,10 +515,10 @@ class OsServicosPrestados
     }
 
     /**
-     * @param Impostos|null $impostos
+     * @param OsImpostos|null $impostos
      * @return OsServicosPrestados
      */
-    public function AddImpostos(?Impostos $impostos): OsServicosPrestados
+    public function AddImpostos(?OsImpostos $impostos): OsServicosPrestados
     {
         $this->impostos[] = $impostos->toArray();
         return $this;

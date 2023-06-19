@@ -2,7 +2,7 @@
 
 namespace O4l3x4ndr3\SdkOmie\Types;
 
-class Impostos
+class OsImpostos
 {
     /** Indica se o imposto foi alterado pelo usuário ou informado via importação de planilha ou API.
      *
@@ -34,7 +34,7 @@ class Impostos
      */
     private ?float $nValorISS;
 
-    /** Indica se o valor informado para os Impostos Federais deverá ser mantido ao invés de ser recalculado a partir da alíquota.
+    /** Indica se o valor informado para os OsImpostos Federais deverá ser mantido ao invés de ser recalculado a partir da alíquota.
      *
      * @var string|null
      */
@@ -291,9 +291,9 @@ class Impostos
 
     /**
      * @param string|null $cFixarISS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCFixarISS(?string $cFixarISS): Impostos
+    public function setCFixarISS(?string $cFixarISS): OsImpostos
     {
         $this->cFixarISS = $cFixarISS;
         return $this;
@@ -309,9 +309,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqISS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqISS(?float $nAliqISS): Impostos
+    public function setNAliqISS(?float $nAliqISS): OsImpostos
     {
         $this->nAliqISS = $nAliqISS;
         return $this;
@@ -327,9 +327,9 @@ class Impostos
 
     /**
      * @param float|null $nBaseISS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNBaseISS(?float $nBaseISS): Impostos
+    public function setNBaseISS(?float $nBaseISS): OsImpostos
     {
         $this->nBaseISS = $nBaseISS;
         return $this;
@@ -345,9 +345,9 @@ class Impostos
 
     /**
      * @param float|null $nTotDeducao
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNTotDeducao(?float $nTotDeducao): Impostos
+    public function setNTotDeducao(?float $nTotDeducao): OsImpostos
     {
         $this->nTotDeducao = $nTotDeducao;
         return $this;
@@ -363,9 +363,9 @@ class Impostos
 
     /**
      * @param float|null $nValorISS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNValorISS(?float $nValorISS): Impostos
+    public function setNValorISS(?float $nValorISS): OsImpostos
     {
         $this->nValorISS = $nValorISS;
         return $this;
@@ -381,9 +381,9 @@ class Impostos
 
     /**
      * @param string|null $cUtilizaValorImposto
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCUtilizaValorImposto(?string $cUtilizaValorImposto): Impostos
+    public function setCUtilizaValorImposto(?string $cUtilizaValorImposto): OsImpostos
     {
         $this->cUtilizaValorImposto = $cUtilizaValorImposto;
         return $this;
@@ -399,9 +399,9 @@ class Impostos
 
     /**
      * @param string|null $cFixarIRRF
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCFixarIRRF(?string $cFixarIRRF): Impostos
+    public function setCFixarIRRF(?string $cFixarIRRF): OsImpostos
     {
         $this->cFixarIRRF = $cFixarIRRF;
         return $this;
@@ -417,9 +417,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqIRRF
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqIRRF(?float $nAliqIRRF): Impostos
+    public function setNAliqIRRF(?float $nAliqIRRF): OsImpostos
     {
         $this->nAliqIRRF = $nAliqIRRF;
         return $this;
@@ -435,9 +435,9 @@ class Impostos
 
     /**
      * @param float|null $nValorIRRF
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNValorIRRF(?float $nValorIRRF): Impostos
+    public function setNValorIRRF(?float $nValorIRRF): OsImpostos
     {
         $this->nValorIRRF = $nValorIRRF;
         return $this;
@@ -453,9 +453,9 @@ class Impostos
 
     /**
      * @param string|null $cRetemIRRF
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCRetemIRRF(?string $cRetemIRRF): Impostos
+    public function setCRetemIRRF(?string $cRetemIRRF): OsImpostos
     {
         $this->cRetemIRRF = $cRetemIRRF;
         return $this;
@@ -471,9 +471,9 @@ class Impostos
 
     /**
      * @param string|null $cFixarPIS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCFixarPIS(?string $cFixarPIS): Impostos
+    public function setCFixarPIS(?string $cFixarPIS): OsImpostos
     {
         $this->cFixarPIS = $cFixarPIS;
         return $this;
@@ -489,9 +489,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqPIS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqPIS(?float $nAliqPIS): Impostos
+    public function setNAliqPIS(?float $nAliqPIS): OsImpostos
     {
         $this->nAliqPIS = $nAliqPIS;
         return $this;
@@ -507,9 +507,9 @@ class Impostos
 
     /**
      * @param float|null $nValorPIS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNValorPIS(?float $nValorPIS): Impostos
+    public function setNValorPIS(?float $nValorPIS): OsImpostos
     {
         $this->nValorPIS = $nValorPIS;
         return $this;
@@ -525,9 +525,9 @@ class Impostos
 
     /**
      * @param string|null $cRetemPIS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCRetemPIS(?string $cRetemPIS): Impostos
+    public function setCRetemPIS(?string $cRetemPIS): OsImpostos
     {
         $this->cRetemPIS = $cRetemPIS;
         return $this;
@@ -543,9 +543,9 @@ class Impostos
 
     /**
      * @param string|null $cFixarCOFINS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCFixarCOFINS(?string $cFixarCOFINS): Impostos
+    public function setCFixarCOFINS(?string $cFixarCOFINS): OsImpostos
     {
         $this->cFixarCOFINS = $cFixarCOFINS;
         return $this;
@@ -561,9 +561,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqCOFINS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqCOFINS(?float $nAliqCOFINS): Impostos
+    public function setNAliqCOFINS(?float $nAliqCOFINS): OsImpostos
     {
         $this->nAliqCOFINS = $nAliqCOFINS;
         return $this;
@@ -579,9 +579,9 @@ class Impostos
 
     /**
      * @param float|null $nValorCOFINS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNValorCOFINS(?float $nValorCOFINS): Impostos
+    public function setNValorCOFINS(?float $nValorCOFINS): OsImpostos
     {
         $this->nValorCOFINS = $nValorCOFINS;
         return $this;
@@ -597,9 +597,9 @@ class Impostos
 
     /**
      * @param string|null $cRetemCOFINS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCRetemCOFINS(?string $cRetemCOFINS): Impostos
+    public function setCRetemCOFINS(?string $cRetemCOFINS): OsImpostos
     {
         $this->cRetemCOFINS = $cRetemCOFINS;
         return $this;
@@ -615,9 +615,9 @@ class Impostos
 
     /**
      * @param string|null $cFixarCSLL
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCFixarCSLL(?string $cFixarCSLL): Impostos
+    public function setCFixarCSLL(?string $cFixarCSLL): OsImpostos
     {
         $this->cFixarCSLL = $cFixarCSLL;
         return $this;
@@ -633,9 +633,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqCSLL
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqCSLL(?float $nAliqCSLL): Impostos
+    public function setNAliqCSLL(?float $nAliqCSLL): OsImpostos
     {
         $this->nAliqCSLL = $nAliqCSLL;
         return $this;
@@ -651,9 +651,9 @@ class Impostos
 
     /**
      * @param float|null $nValorCSLL
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNValorCSLL(?float $nValorCSLL): Impostos
+    public function setNValorCSLL(?float $nValorCSLL): OsImpostos
     {
         $this->nValorCSLL = $nValorCSLL;
         return $this;
@@ -669,9 +669,9 @@ class Impostos
 
     /**
      * @param string|null $cRetemCSLL
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCRetemCSLL(?string $cRetemCSLL): Impostos
+    public function setCRetemCSLL(?string $cRetemCSLL): OsImpostos
     {
         $this->cRetemCSLL = $cRetemCSLL;
         return $this;
@@ -687,9 +687,9 @@ class Impostos
 
     /**
      * @param string|null $cFixarINSS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCFixarINSS(?string $cFixarINSS): Impostos
+    public function setCFixarINSS(?string $cFixarINSS): OsImpostos
     {
         $this->cFixarINSS = $cFixarINSS;
         return $this;
@@ -705,9 +705,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqINSS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqINSS(?float $nAliqINSS): Impostos
+    public function setNAliqINSS(?float $nAliqINSS): OsImpostos
     {
         $this->nAliqINSS = $nAliqINSS;
         return $this;
@@ -723,9 +723,9 @@ class Impostos
 
     /**
      * @param float|null $nValorINSS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNValorINSS(?float $nValorINSS): Impostos
+    public function setNValorINSS(?float $nValorINSS): OsImpostos
     {
         $this->nValorINSS = $nValorINSS;
         return $this;
@@ -741,9 +741,9 @@ class Impostos
 
     /**
      * @param string|null $cRetemINSS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setCRetemINSS(?string $cRetemINSS): Impostos
+    public function setCRetemINSS(?string $cRetemINSS): OsImpostos
     {
         $this->cRetemINSS = $cRetemINSS;
         return $this;
@@ -759,9 +759,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqRedBaseINSS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqRedBaseINSS(?float $nAliqRedBaseINSS): Impostos
+    public function setNAliqRedBaseINSS(?float $nAliqRedBaseINSS): OsImpostos
     {
         $this->nAliqRedBaseINSS = $nAliqRedBaseINSS;
         return $this;
@@ -777,9 +777,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqRedBaseCOFINS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqRedBaseCOFINS(?float $nAliqRedBaseCOFINS): Impostos
+    public function setNAliqRedBaseCOFINS(?float $nAliqRedBaseCOFINS): OsImpostos
     {
         $this->nAliqRedBaseCOFINS = $nAliqRedBaseCOFINS;
         return $this;
@@ -795,9 +795,9 @@ class Impostos
 
     /**
      * @param float|null $nAliqRedBasePIS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setNAliqRedBasePIS(?float $nAliqRedBasePIS): Impostos
+    public function setNAliqRedBasePIS(?float $nAliqRedBasePIS): OsImpostos
     {
         $this->nAliqRedBasePIS = $nAliqRedBasePIS;
         return $this;
@@ -813,9 +813,9 @@ class Impostos
 
     /**
      * @param bool|null $lDeduzISS
-     * @return Impostos
+     * @return OsImpostos
      */
-    public function setLDeduzISS(?bool $lDeduzISS): Impostos
+    public function setLDeduzISS(?bool $lDeduzISS): OsImpostos
     {
         $this->lDeduzISS = $lDeduzISS;
         return $this;
