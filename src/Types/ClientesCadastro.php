@@ -320,166 +320,71 @@ class ClientesCadastro
     private ?string $bloquear_exclusao;
 
     /**
-     * @param int|null $codigo_cliente_omie
      * @param string|null $codigo_cliente_integracao
-     * @param string|null $razao_social
-     * @param string|null $cnpj_cpf
-     * @param string|null $nome_fantasia
-     * @param string|null $telefone1_ddd
-     * @param string|null $telefone1_numero
-     * @param string|null $contato
-     * @param string|null $endereco
-     * @param string|null $endereco_numero
-     * @param string|null $bairro
-     * @param string|null $complemento
-     * @param string|null $estado
-     * @param string|null $cidade
-     * @param string|null $cep
-     * @param string|null $codigo_pais
-     * @param string|null $separar_endereco
-     * @param string|null $pesquisar_cep
-     * @param string|null $telefone2_ddd
-     * @param string|null $telefone2_numero
-     * @param string|null $fax_ddd
-     * @param string|null $fax_numero
      * @param string|null $email
-     * @param string|null $homepage
-     * @param string|null $inscricao_estadual
-     * @param string|null $inscricao_municipal
-     * @param string|null $inscricao_suframa
-     * @param string|null $optante_simples_nacional
-     * @param string|null $tipo_atividade
-     * @param string|null $cnae
-     * @param string|null $produtor_rural
-     * @param string|null $contribuinte
-     * @param string|null $observacao
-     * @param string|null $obs_detalhadas
-     * @param string|null $recomendacao_atraso
-     * @param array|null $tags
-     * @param string|null $pessoa_fisica
-     * @param string|null $exterior
-     * @param string|null $importado_api
-     * @param string|null $cidade_ibge
-     * @param float|null $valor_limite_credito
-     * @param string|null $bloquear_faturamento
-     * @param Recomendacoes|null $recomendacoes
-     * @param EnderecoEntrega|null $enderecoEntrega
-     * @param string|null $nif
-     * @param string|null $documento_exterior
-     * @param string|null $inativo
-     * @param DadosBancarios|null $dadosBancarios
-     * @param Caracteristicas|null $caracteristicas
-     * @param string|null $enviar_anexos
-     * @param Info|null $info
-     * @param string|null $bloquear_exclusao
+     * @param string|null $razao_social
+     * @param string|null $nome_fantasia
+     *
      */
     public function __construct(
-        ?int             $codigo_cliente_omie = null,
-        ?string          $codigo_cliente_integracao = null,
-        ?string          $razao_social = null,
-        ?string          $cnpj_cpf = null,
-        ?string          $nome_fantasia = null,
-        ?string          $telefone1_ddd = null,
-        ?string          $telefone1_numero = null,
-        ?string          $contato = null,
-        ?string          $endereco = null,
-        ?string          $endereco_numero = null,
-        ?string          $bairro = null,
-        ?string          $complemento = null,
-        ?string          $estado = null,
-        ?string          $cidade = null,
-        ?string          $cep = null,
-        ?string          $codigo_pais = null,
-        ?string          $separar_endereco = null,
-        ?string          $pesquisar_cep = null,
-        ?string          $telefone2_ddd = null,
-        ?string          $telefone2_numero = null,
-        ?string          $fax_ddd = null,
-        ?string          $fax_numero = null,
-        ?string          $email = null,
-        ?string          $homepage = null,
-        ?string          $inscricao_estadual = null,
-        ?string          $inscricao_municipal = null,
-        ?string          $inscricao_suframa = null,
-        ?string          $optante_simples_nacional = null,
-        ?string          $tipo_atividade = null,
-        ?string          $cnae = null,
-        ?string          $produtor_rural = null,
-        ?string          $contribuinte = null,
-        ?string          $observacao = null,
-        ?string          $obs_detalhadas = null,
-        ?string          $recomendacao_atraso = null,
-        ?array           $tags = null,
-        ?string          $pessoa_fisica = null,
-        ?string          $exterior = null,
-        ?string          $importado_api = null,
-        ?string          $cidade_ibge = null,
-        ?float           $valor_limite_credito = null,
-        ?string          $bloquear_faturamento = null,
-        ?Recomendacoes   $recomendacoes = null,
-        ?EnderecoEntrega $enderecoEntrega = null,
-        ?string          $nif = null,
-        ?string          $documento_exterior = null,
-        ?string          $inativo = null,
-        ?DadosBancarios  $dadosBancarios = null,
-        ?Caracteristicas $caracteristicas = null,
-        ?string          $enviar_anexos = null,
-        ?Info            $info = null,
-        ?string          $bloquear_exclusao = null
+        ?string $codigo_cliente_integracao = null,
+        ?string $email = null,
+        ?string $razao_social = null,
+        ?string $nome_fantasia = null
     )
     {
-        $this->codigo_cliente_omie = $codigo_cliente_omie;
+        $this->codigo_cliente_omie = null;
         $this->codigo_cliente_integracao = $codigo_cliente_integracao;
-        $this->razao_social = $razao_social;
-        $this->cnpj_cpf = $cnpj_cpf;
-        $this->nome_fantasia = $nome_fantasia;
-        $this->telefone1_ddd = $telefone1_ddd;
-        $this->telefone1_numero = $telefone1_numero;
-        $this->contato = $contato;
-        $this->endereco = $endereco;
-        $this->endereco_numero = $endereco_numero;
-        $this->bairro = $bairro;
-        $this->complemento = $complemento;
-        $this->estado = $estado;
-        $this->cidade = $cidade;
-        $this->cep = $cep;
-        $this->codigo_pais = $codigo_pais;
-        $this->separar_endereco = $separar_endereco;
-        $this->pesquisar_cep = $pesquisar_cep;
-        $this->telefone2_ddd = $telefone2_ddd;
-        $this->telefone2_numero = $telefone2_numero;
-        $this->fax_ddd = $fax_ddd;
-        $this->fax_numero = $fax_numero;
         $this->email = $email;
-        $this->homepage = $homepage;
-        $this->inscricao_estadual = $inscricao_estadual;
-        $this->inscricao_municipal = $inscricao_municipal;
-        $this->inscricao_suframa = $inscricao_suframa;
-        $this->optante_simples_nacional = $optante_simples_nacional;
-        $this->tipo_atividade = $tipo_atividade;
-        $this->cnae = $cnae;
-        $this->produtor_rural = $produtor_rural;
-        $this->contribuinte = $contribuinte;
-        $this->observacao = $observacao;
-        $this->obs_detalhadas = $obs_detalhadas;
-        $this->recomendacao_atraso = $recomendacao_atraso;
-        $this->tags = $tags;
-        $this->pessoa_fisica = $pessoa_fisica;
-        $this->exterior = $exterior;
-        $this->importado_api = $importado_api;
-        $this->cidade_ibge = $cidade_ibge;
-        $this->valor_limite_credito = $valor_limite_credito;
-        $this->bloquear_faturamento = $bloquear_faturamento;
-        $this->recomendacoes = $recomendacoes;
-        $this->enderecoEntrega = $enderecoEntrega;
-        $this->nif = $nif;
-        $this->documento_exterior = $documento_exterior;
-        $this->inativo = $inativo;
-        $this->dadosBancarios = $dadosBancarios;
-        $this->caracteristicas = $caracteristicas;
-        $this->enviar_anexos = $enviar_anexos;
-        $this->info = $info;
-        $this->bloquear_exclusao = $bloquear_exclusao;
+        $this->razao_social = $razao_social;
+        $this->nome_fantasia = $nome_fantasia;
+        $this->cnpj_cpf = null;
+        $this->telefone1_ddd = null;
+        $this->telefone1_numero = null;
+        $this->contato = null;
+        $this->endereco = null;
+        $this->endereco_numero = null;
+        $this->bairro = null;
+        $this->complemento = null;
+        $this->estado = null;
+        $this->cidade = null;
+        $this->cep = null;
+        $this->codigo_pais = null;
+        $this->separar_endereco = null;
+        $this->pesquisar_cep = null;
+        $this->telefone2_ddd = null;
+        $this->telefone2_numero = null;
+        $this->fax_ddd = null;
+        $this->fax_numero = null;
+        $this->homepage = null;
+        $this->inscricao_estadual = null;
+        $this->inscricao_municipal = null;
+        $this->inscricao_suframa = null;
+        $this->optante_simples_nacional = null;
+        $this->tipo_atividade = null;
+        $this->cnae = null;
+        $this->produtor_rural = null;
+        $this->contribuinte = null;
+        $this->observacao = null;
+        $this->obs_detalhadas = null;
+        $this->recomendacao_atraso = null;
+        $this->tags = null;
+        $this->pessoa_fisica = null;
+        $this->exterior = null;
+        $this->importado_api = null;
+        $this->cidade_ibge = null;
+        $this->valor_limite_credito = null;
+        $this->bloquear_faturamento = null;
+        $this->recomendacoes = null;
+        $this->enderecoEntrega = null;
+        $this->nif = null;
+        $this->documento_exterior = null;
+        $this->inativo = null;
+        $this->dadosBancarios = null;
+        $this->caracteristicas = null;
+        $this->enviar_anexos = null;
+        $this->info = null;
+        $this->bloquear_exclusao = null;
     }
 
     /**
