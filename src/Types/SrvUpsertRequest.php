@@ -151,11 +151,11 @@ class SrvUpsertRequest
 
     public function toArray(): array {
         return array_filter([
-            "intEditar" =>$this->intEditar,
-            "cabecalho" =>$this->cabecalho,
-            "descricao" =>$this->descricao,
-            "impostos" =>$this->impostos,
-            "viaUnica" =>$this->viaUnica,
+            "intEditar" => isset($this->intEditar) ? $this->intEditar->toArray() : null,
+            "cabecalho" => isset($this->cabecalho) ? $this->cabecalho->toArray() : null,
+            "descricao" => isset($this->descricao) ? $this->descricao->toArray() : null,
+            "impostos" => isset($this->impostos) ? $this->impostos->toArray() : null,
+            "viaUnica" => isset($this->viaUnica) ? $this->viaUnica->toArray() : null,
         ], function ($v) {
             return !is_null($v);
         });
