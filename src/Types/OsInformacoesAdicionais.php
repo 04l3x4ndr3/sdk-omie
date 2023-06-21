@@ -56,43 +56,43 @@ class OsInformacoesAdicionais
 
     /**
      * @param string|null $cCodCateg
+     * @param string|null $cCidPrestServ
+     * @param string|null $cDadosAdicNF
      * @param int|null $nCodCC
      * @param string|null $cNumPedido
      * @param string|null $cNumContrato
      * @param string|null $cContato
-     * @param string|null $cDadosAdicNF
      * @param string|null $cCodObra
      * @param string|null $cCodART
      * @param int|null $nCodProj
-     * @param string|null $cCidPrestServ
      * @param string|null $dDataRps
      * @param string|null $cNumRecibo
      */
     public function __construct(
         ?string $cCodCateg = null,
+        ?string $cCidPrestServ = null,
+        ?string $cDadosAdicNF = null,
         ?int    $nCodCC = null,
         ?string $cNumPedido = null,
         ?string $cNumContrato = null,
         ?string $cContato = null,
-        ?string $cDadosAdicNF = null,
         ?string $cCodObra = null,
         ?string $cCodART = null,
         ?int    $nCodProj = null,
-        ?string $cCidPrestServ = null,
         ?string $dDataRps = null,
         ?string $cNumRecibo = null
     )
     {
         $this->cCodCateg = $cCodCateg;
+        $this->cCidPrestServ = $cCidPrestServ;
+        $this->cDadosAdicNF = $cDadosAdicNF;
         $this->nCodCC = $nCodCC;
         $this->cNumPedido = $cNumPedido;
         $this->cNumContrato = $cNumContrato;
         $this->cContato = $cContato;
-        $this->cDadosAdicNF = $cDadosAdicNF;
         $this->cCodObra = $cCodObra;
         $this->cCodART = $cCodART;
         $this->nCodProj = $nCodProj;
-        $this->cCidPrestServ = $cCidPrestServ;
         $this->dDataRps = $dDataRps;
         $this->cNumRecibo = $cNumRecibo;
     }

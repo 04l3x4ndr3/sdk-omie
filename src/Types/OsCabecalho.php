@@ -44,6 +44,11 @@ class OsCabecalho
     private ?string $dDtPrevisao;
 
     /** Código da etapa do processo, sendo:
+     * 10 - Primeira coluna;
+     * 20 - Segunda coluna;
+     * 30 - Terceira coluna;
+     * 40 - Quarta coluna;
+     * 50 - Faturar.
      *
      * @var string|null
      */
@@ -87,47 +92,47 @@ class OsCabecalho
 
     /**
      * @param string|null $cCodIntOS
-     * @param int|null $nCodOS
-     * @param string|null $cNumOS
-     * @param string|null $cCodIntCli
      * @param int|null $nCodCli
      * @param string|null $dDtPrevisao
-     * @param string|null $cEtapa
-     * @param int|null $nCodVend
      * @param int|null $nQtdeParc
      * @param string|null $cCodParc
      * @param float|null $nValorTotal
      * @param float|null $nValorTotalImpRet
+     * @param int|null $nCodOS
+     * @param string|null $cNumOS
+     * @param string|null $cCodIntCli
+     * @param string|null $cEtapa
+     * @param int|null $nCodVend
      * @param int|null $nCodCtr
      */
     public function __construct(
         ?string $cCodIntOS = null,
-        ?int $nCodOS = null,
+        ?int    $nCodCli = null,
+        ?string $dDtPrevisao = null,
+        ?int    $nQtdeParc = null,
+        ?string $cCodParc = null,
+        ?float  $nValorTotal = null,
+        ?float  $nValorTotalImpRet = null,
+        ?int    $nCodOS = null,
         ?string $cNumOS = null,
         ?string $cCodIntCli = null,
-        ?int $nCodCli = null,
-        ?string $dDtPrevisao = null,
         ?string $cEtapa = null,
-        ?int $nCodVend = null,
-        ?int $nQtdeParc = null,
-        ?string $cCodParc = null,
-        ?float $nValorTotal = null,
-        ?float $nValorTotalImpRet = null,
-        ?int $nCodCtr = null
+        ?int    $nCodVend = null,
+        ?int    $nCodCtr = null
     )
     {
         $this->cCodIntOS = $cCodIntOS;
-        $this->nCodOS = $nCodOS;
-        $this->cNumOS = $cNumOS;
-        $this->cCodIntCli = $cCodIntCli;
         $this->nCodCli = $nCodCli;
         $this->dDtPrevisao = $dDtPrevisao;
-        $this->cEtapa = $cEtapa;
-        $this->nCodVend = $nCodVend;
         $this->nQtdeParc = $nQtdeParc;
         $this->cCodParc = $cCodParc;
         $this->nValorTotal = $nValorTotal;
         $this->nValorTotalImpRet = $nValorTotalImpRet;
+        $this->nCodOS = $nCodOS;
+        $this->cNumOS = $cNumOS;
+        $this->cCodIntCli = $cCodIntCli;
+        $this->cEtapa = $cEtapa;
+        $this->nCodVend = $nCodVend;
         $this->nCodCtr = $nCodCtr;
     }
 

@@ -144,13 +144,13 @@ class OsServicosPrestados
     private ?array $viaUnica;
 
     /**
-     * @param int|null $nCodServico
      * @param string|null $cCodIntServico
+     * @param float|null $nValUnit
+     * @param float|null $nQtde
+     * @param int|null $nCodServico
      * @param string|null $cTribServ
      * @param string|null $cCodServMun
      * @param string|null $cCodServLC116
-     * @param float|null $nQtde
-     * @param float|null $nValUnit
      * @param string|null $cTpDesconto
      * @param float|null $nValorDesconto
      * @param float|null $nAliqDesconto
@@ -169,13 +169,13 @@ class OsServicosPrestados
      * @param array|null $viaUnica
      */
     public function __construct(
-        ?int    $nCodServico = null,
         ?string $cCodIntServico = null,
+        ?float  $nValUnit = null,
+        ?float  $nQtde = null,
+        ?int    $nCodServico = null,
         ?string $cTribServ = null,
         ?string $cCodServMun = null,
         ?string $cCodServLC116 = null,
-        ?float  $nQtde = null,
-        ?float  $nValUnit = null,
         ?string $cTpDesconto = null,
         ?float  $nValorDesconto = null,
         ?float  $nAliqDesconto = null,
@@ -193,13 +193,13 @@ class OsServicosPrestados
         ?string $cAcaoItem = null,
         ?array  $viaUnica = null)
     {
-        $this->nCodServico = $nCodServico;
         $this->cCodIntServico = $cCodIntServico;
+        $this->nValUnit = $nValUnit;
+        $this->nQtde = $nQtde;
+        $this->nCodServico = $nCodServico;
         $this->cTribServ = $cTribServ;
         $this->cCodServMun = $cCodServMun;
         $this->cCodServLC116 = $cCodServLC116;
-        $this->nQtde = $nQtde;
-        $this->nValUnit = $nValUnit;
         $this->cTpDesconto = $cTpDesconto;
         $this->nValorDesconto = $nValorDesconto;
         $this->nAliqDesconto = $nAliqDesconto;

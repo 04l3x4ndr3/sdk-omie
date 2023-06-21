@@ -44,27 +44,27 @@ class Email
     private ?string $cEnvViaUnica;
 
     /**
+     * @param string|null $cEnviarPara
      * @param string|null $cEnvRecibo
      * @param string|null $cEnvLink
      * @param string|null $cEnvBoleto
      * @param string|null $cEnvPix
-     * @param string|null $cEnviarPara
      * @param string|null $cEnvViaUnica
      */
     public function __construct(
+        ?string $cEnviarPara = null,
         ?string $cEnvRecibo = null,
         ?string $cEnvLink = null,
         ?string $cEnvBoleto = null,
         ?string $cEnvPix = null,
-        ?string $cEnviarPara = null,
         ?string $cEnvViaUnica = null
     )
     {
+        $this->cEnviarPara = $cEnviarPara;
         $this->cEnvRecibo = $cEnvRecibo;
         $this->cEnvLink = $cEnvLink;
         $this->cEnvBoleto = $cEnvBoleto;
         $this->cEnvPix = $cEnvPix;
-        $this->cEnviarPara = $cEnviarPara;
         $this->cEnvViaUnica = $cEnvViaUnica;
     }
 
@@ -179,7 +179,8 @@ class Email
     /**
      * @return array
      */
-    public function toArray(): array {
+    public function toArray(): array
+    {
         return array_filter([
             "cEnvRecibo" => $this->cEnvRecibo,
             "cEnvLink" => $this->cEnvLink,
