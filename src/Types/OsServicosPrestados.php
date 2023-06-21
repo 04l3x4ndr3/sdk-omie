@@ -144,10 +144,11 @@ class OsServicosPrestados
     private ?array $viaUnica;
 
     /**
-     * @param string|null $cCodIntServico
+     * @param int|null $nCodServico
      * @param float|null $nValUnit
      * @param float|null $nQtde
-     * @param int|null $nCodServico
+     * @param string|null $cDescServ
+     * @param string|null $cCodIntServico
      * @param string|null $cTribServ
      * @param string|null $cCodServMun
      * @param string|null $cCodServLC116
@@ -156,7 +157,6 @@ class OsServicosPrestados
      * @param float|null $nAliqDesconto
      * @param float|null $nValorOutrasRetencoes
      * @param float|null $nValorAcrescimos
-     * @param string|null $cDescServ
      * @param string|null $cRetemISS
      * @param string|null $cDadosAdicItem
      * @param string|null $cNbs
@@ -169,10 +169,11 @@ class OsServicosPrestados
      * @param array|null $viaUnica
      */
     public function __construct(
-        ?string $cCodIntServico = null,
+        ?int    $nCodServico = null,
         ?float  $nValUnit = null,
         ?float  $nQtde = null,
-        ?int    $nCodServico = null,
+        ?string $cDescServ = null,
+        ?string $cCodIntServico = null,
         ?string $cTribServ = null,
         ?string $cCodServMun = null,
         ?string $cCodServLC116 = null,
@@ -181,7 +182,6 @@ class OsServicosPrestados
         ?float  $nAliqDesconto = null,
         ?float  $nValorOutrasRetencoes = null,
         ?float  $nValorAcrescimos = null,
-        ?string $cDescServ = null,
         ?string $cRetemISS = null,
         ?string $cDadosAdicItem = null,
         ?string $cNbs = null,
@@ -193,10 +193,11 @@ class OsServicosPrestados
         ?string $cAcaoItem = null,
         ?array  $viaUnica = null)
     {
-        $this->cCodIntServico = $cCodIntServico;
+        $this->nCodServico = $nCodServico;
         $this->nValUnit = $nValUnit;
         $this->nQtde = $nQtde;
-        $this->nCodServico = $nCodServico;
+        $this->cDescServ = $cDescServ;
+        $this->cCodIntServico = $cCodIntServico;
         $this->cTribServ = $cTribServ;
         $this->cCodServMun = $cCodServMun;
         $this->cCodServLC116 = $cCodServLC116;
@@ -205,7 +206,6 @@ class OsServicosPrestados
         $this->nAliqDesconto = $nAliqDesconto;
         $this->nValorOutrasRetencoes = $nValorOutrasRetencoes;
         $this->nValorAcrescimos = $nValorAcrescimos;
-        $this->cDescServ = $cDescServ;
         $this->cRetemISS = $cRetemISS;
         $this->cDadosAdicItem = $cDadosAdicItem;
         $this->cNbs = $cNbs;
