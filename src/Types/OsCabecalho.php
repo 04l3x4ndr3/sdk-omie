@@ -94,14 +94,14 @@ class OsCabecalho
      * @param int|null $nCodCli
      * @param string|null $dDtPrevisao
      * @param int|null $nQtdeParc
-     * @param string|null $cCodParc
-     * @param float|null $nValorTotal
-     * @param float|null $nValorTotalImpRet
+     * @param string|null $cEtapa
      * @param string|null $cCodIntOS
+     * @param float|null $nValorTotal
+     * @param string|null $cCodParc
+     * @param float|null $nValorTotalImpRet
      * @param int|null $nCodOS
      * @param string|null $cNumOS
      * @param string|null $cCodIntCli
-     * @param string|null $cEtapa
      * @param int|null $nCodVend
      * @param int|null $nCodCtr
      */
@@ -109,14 +109,14 @@ class OsCabecalho
         ?int    $nCodCli = null,
         ?string $dDtPrevisao = null,
         ?int    $nQtdeParc = null,
-        ?string $cCodParc = null,
-        ?float  $nValorTotal = null,
-        ?float  $nValorTotalImpRet = null,
+        ?string $cEtapa = null,
         ?string $cCodIntOS = null,
+        ?float  $nValorTotal = null,
+        ?string $cCodParc = null,
+        ?float  $nValorTotalImpRet = null,
         ?int    $nCodOS = null,
         ?string $cNumOS = null,
         ?string $cCodIntCli = null,
-        ?string $cEtapa = null,
         ?int    $nCodVend = null,
         ?int    $nCodCtr = null
     )
@@ -124,14 +124,14 @@ class OsCabecalho
         $this->nCodCli = $nCodCli;
         $this->dDtPrevisao = $dDtPrevisao;
         $this->nQtdeParc = $nQtdeParc;
-        $this->cCodParc = $cCodParc;
+        $this->cEtapa = $cEtapa;
+        $this->cCodIntOS = $cCodIntOS;
         $this->nValorTotal = $nValorTotal;
+        $this->cCodParc = $cCodParc;
         $this->nValorTotalImpRet = $nValorTotalImpRet;
         $this->nCodOS = $nCodOS;
-        $this->cCodIntOS = $cCodIntOS;
         $this->cNumOS = $cNumOS;
         $this->cCodIntCli = $cCodIntCli;
-        $this->cEtapa = $cEtapa;
         $this->nCodVend = $nCodVend;
         $this->nCodCtr = $nCodCtr;
     }
