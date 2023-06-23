@@ -6,6 +6,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use O4l3x4ndr3\SdkOmie\Configuration;
 use O4l3x4ndr3\SdkOmie\Helpers\CallApi;
 use O4l3x4ndr3\SdkOmie\Types\OsCadastro;
+use O4l3x4ndr3\SdkOmie\Types\OsChave;
 use O4l3x4ndr3\SdkOmie\Types\OsListarRequest;
 
 /**
@@ -30,14 +31,14 @@ class OrdemServico extends CallApi
     }
 
     /**
-     * @param array|null $param
+     * @param OsChave|null $osChave
      *
      * @return object
      * @throws GuzzleException
      */
-    public function consultarOS(?array $param = null): object
+    public function consultarOS(?OsChave $osChave = null): object
     {
-        return $this->call("servicos/os/#ConsultarOS", $param);
+        return $this->call("servicos/os/#ConsultarOS", $osChave->toArray());
     }
 
     /**
