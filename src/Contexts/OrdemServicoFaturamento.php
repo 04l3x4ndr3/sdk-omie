@@ -2,9 +2,6 @@
 
 namespace O4l3x4ndr3\SdkOmie\Contexts;
 
-require 'application/third_party/sdk-omie/src/Helpers/CallApi.php';
-require 'application/third_party/sdk-omie/src/Configuration.php';
-
 use GuzzleHttp\Exception\GuzzleException;
 use O4l3x4ndr3\SdkOmie\Configuration;
 use O4l3x4ndr3\SdkOmie\Helpers\CallApi;
