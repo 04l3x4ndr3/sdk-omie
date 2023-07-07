@@ -61,9 +61,9 @@ class OsListarRequest
 
     /** Lista de códigos de Ordem de Serviço.
      *
-     * @var array [@int $nCodOS, @string $cCodIntOS]
+     * @var array|null [@int $nCodOS, @string $cCodIntOS]
      */
-    private array $filtrar_por_codigo;
+    private ?array $filtrar_por_codigo;
 
     /** Status da OS:+
      *
@@ -87,7 +87,7 @@ class OsListarRequest
      *
      * @var string|null
      */
-    private string $filtrar_por_data_previsao_de;
+    private ?string $filtrar_por_data_previsao_de;
 
     /** Data de previsão final.
      *
@@ -144,8 +144,8 @@ class OsListarRequest
     private ?string $cTipoFat;
 
     /**
-     * @param int|null    $pagina
-     * @param int|null    $registros_por_pagina
+     * @param int|null $pagina
+     * @param int|null $registros_por_pagina
      * @param string|null $apenas_importado_api
      * @param string|null $ordenar_por
      * @param string|null $ordem_decrescente
@@ -153,10 +153,10 @@ class OsListarRequest
      * @param string|null $filtrar_por_data_ate
      * @param string|null $filtrar_apenas_inclusao
      * @param string|null $filtrar_apenas_alteracao
-     * @param array       $filtrar_por_codigo
+     * @param array|null $filtrar_por_codigo
      * @param string|null $filtrar_por_status
      * @param string|null $filtrar_por_etapa
-     * @param int|null    $filtrar_por_cliente
+     * @param int|null $filtrar_por_cliente
      * @param string|null $filtrar_por_data_previsao_de
      * @param string|null $filtrar_por_data_previsao_ate
      * @param string|null $filtrar_por_data_faturamento_de
@@ -169,19 +169,20 @@ class OsListarRequest
      * @param string|null $cTipoFat
      */
     public function __construct(
-        ?int $pagina = null,
-        ?int $registros_por_pagina = null,
+        ?int    $pagina = null,
+        ?int    $registros_por_pagina = null,
         ?string $apenas_importado_api = null,
         ?string $ordenar_por = null,
         ?string $ordem_decrescente = null,
         ?string $filtrar_por_data_de = null,
         ?string $filtrar_por_data_ate = null,
-        ?string $filtrar_apenas_inclusao = null, ?string $filtrar_apenas_alteracao = null,
-        ?array $filtrar_por_codigo = null,
+        ?string $filtrar_apenas_inclusao = null,
+        ?string $filtrar_apenas_alteracao = null,
+        ?array  $filtrar_por_codigo = null,
         ?string $filtrar_por_status = null,
         ?string $filtrar_por_etapa = null,
-        ?int $filtrar_por_cliente = null,
-        string $filtrar_por_data_previsao_de = null,
+        ?int    $filtrar_por_cliente = null,
+        ?string $filtrar_por_data_previsao_de = null,
         ?string $filtrar_por_data_previsao_ate = null,
         ?string $filtrar_por_data_faturamento_de = null,
         ?string $filtrar_por_data_faturamento_ate = null,
@@ -390,19 +391,19 @@ class OsListarRequest
     }
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getFiltrarPorCodigo(): array
+    public function getFiltrarPorCodigo(): ?array
     {
         return $this->filtrar_por_codigo;
     }
 
     /**
-     * @param array $filtrar_por_codigo
+     * @param array|null $filtrar_por_codigo
      *
      * @return OsListarRequest
      */
-    public function setFiltrarPorCodigo(array $filtrar_por_codigo): OsListarRequest
+    public function setFiltrarPorCodigo(?array $filtrar_por_codigo): OsListarRequest
     {
         $this->filtrar_por_codigo = $filtrar_por_codigo;
         return $this;
@@ -466,19 +467,19 @@ class OsListarRequest
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getFiltrarPorDataPrevisaoDe(): string
+    public function getFiltrarPorDataPrevisaoDe(): ?string
     {
         return $this->filtrar_por_data_previsao_de;
     }
 
     /**
-     * @param string $filtrar_por_data_previsao_de
+     * @param string|null $filtrar_por_data_previsao_de
      *
      * @return OsListarRequest
      */
-    public function setFiltrarPorDataPrevisaoDe(string $filtrar_por_data_previsao_de): OsListarRequest
+    public function setFiltrarPorDataPrevisaoDe(?string $filtrar_por_data_previsao_de): OsListarRequest
     {
         $this->filtrar_por_data_previsao_de = $filtrar_por_data_previsao_de;
         return $this;

@@ -227,7 +227,6 @@ class OsCadastro
         return $this;
     }
 
-
     /** Lista de Departamentos
      *
      * @param OsDepartamentos $departamento
