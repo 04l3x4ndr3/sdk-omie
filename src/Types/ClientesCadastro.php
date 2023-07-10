@@ -324,13 +324,29 @@ class ClientesCadastro
      * @param string|null $email
      * @param string|null $razao_social
      * @param string|null $nome_fantasia
+     * @param string|null $cnpj_cpf
+     * @param string|null $endereco
+     * @param string|null $endereco_numero
+     * @param string|null $bairro
+     * @param string|null $cidade
+     * @param string|null $estado
+     * @param string|null $cep
+     * @param string|null $complemento
      *
      */
     public function __construct(
         ?string $codigo_cliente_integracao = null,
         ?string $email = null,
         ?string $razao_social = null,
-        ?string $nome_fantasia = null
+        ?string $nome_fantasia = null,
+        ?string $cnpj_cpf = null,
+        ?string $endereco = null,
+        ?string $endereco_numero = null,
+        ?string $bairro = null,
+        ?string $cidade = null,
+        ?string $estado = null,
+        ?string $cep = null,
+        ?string $complemento = null
     )
     {
         $this->codigo_cliente_omie = null;
@@ -338,17 +354,17 @@ class ClientesCadastro
         $this->email = $email;
         $this->razao_social = $razao_social;
         $this->nome_fantasia = $nome_fantasia;
-        $this->cnpj_cpf = null;
+        $this->cnpj_cpf = $cnpj_cpf;
+        $this->endereco = $endereco;
+        $this->endereco_numero = $endereco_numero;
+        $this->bairro = $bairro;
+        $this->cidade = $cidade;
+        $this->estado = $estado;
+        $this->cep = $cep;
+        $this->complemento = $complemento;
         $this->telefone1_ddd = null;
         $this->telefone1_numero = null;
         $this->contato = null;
-        $this->endereco = null;
-        $this->endereco_numero = null;
-        $this->bairro = null;
-        $this->complemento = null;
-        $this->estado = null;
-        $this->cidade = null;
-        $this->cep = null;
         $this->codigo_pais = null;
         $this->separar_endereco = null;
         $this->pesquisar_cep = null;
