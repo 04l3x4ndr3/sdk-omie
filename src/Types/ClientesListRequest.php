@@ -98,16 +98,19 @@ class ClientesListRequest
     private ?string $exibir_obs;
 
     /**
+     * @param ClientesFiltro|null $clientesFiltro
      * @param int|null $pagina
      * @param int|null $registros_por_pagina
      * @param string|null $apenas_importado_api
      */
     public function __construct(
-        ?int               $pagina = null,
-        ?int               $registros_por_pagina = null,
-        ?string            $apenas_importado_api = null
+        ?ClientesFiltro $clientesFiltro = null,
+        ?int            $pagina = null,
+        ?int            $registros_por_pagina = null,
+        ?string         $apenas_importado_api = null
     )
     {
+        $this->clientesFiltro = $clientesFiltro;
         $this->pagina = $pagina;
         $this->registros_por_pagina = $registros_por_pagina;
         $this->apenas_importado_api = $apenas_importado_api;
@@ -119,7 +122,6 @@ class ClientesListRequest
         $this->filtrar_por_hora_ate = null;
         $this->filtrar_apenas_inclusao = null;
         $this->filtrar_apenas_alteracao = null;
-        $this->clientesFiltro = null;
         $this->clientesPorCodigo = null;
         $this->exibir_caracteristicas = null;
         $this->exibir_obs = null;
