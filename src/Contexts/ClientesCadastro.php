@@ -5,6 +5,7 @@ namespace O4l3x4ndr3\SdkOmie\Contexts;
 use GuzzleHttp\Exception\GuzzleException;
 use O4l3x4ndr3\SdkOmie\Configuration;
 use O4l3x4ndr3\SdkOmie\Helpers\CallApi;
+use O4l3x4ndr3\SdkOmie\Types\ClientesListRequest;
 
 /**
  *
@@ -21,14 +22,14 @@ class ClientesCadastro extends CallApi
     }
 
     /**
-     * @param array|null $param
+     * @param ClientesListRequest|null $param
      *
      * @return object
      * @throws GuzzleException
      */
-    public function listarClientes(?array $param = null): object
+    public function listarClientes(?ClientesListRequest $clientesListRequest = null): object
     {
-        return $this->call("geral/clientes/#ListarClientes", $param);
+        return $this->call("geral/clientes/#ListarClientes", $clientesListRequest->toArray());
     }
 
     /**

@@ -404,6 +404,7 @@ class ClientesListRequest
     public function toArray(): array
     {
         return array_filter([
+            "clientesFiltro" => $this->clientesFiltro,
             "pagina" => $this->pagina,
             "registros_por_pagina" => $this->registros_por_pagina,
             "apenas_importado_api" => $this->apenas_importado_api,
@@ -415,7 +416,6 @@ class ClientesListRequest
             "filtrar_por_hora_ate" => $this->filtrar_por_hora_ate,
             "filtrar_apenas_inclusao" => $this->filtrar_apenas_inclusao,
             "filtrar_apenas_alteracao" => $this->filtrar_apenas_alteracao,
-            "clientesFiltro" => $this->clientesFiltro,
             "clientesPorCodigo" => $this->clientesPorCodigo,
             "exibir_caracteristicas" => $this->exibir_caracteristicas,
             "exibir_obs" => $this->exibir_obs,
