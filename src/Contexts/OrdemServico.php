@@ -53,14 +53,14 @@ class OrdemServico extends CallApi
     }
 
     /**
-     * @param array|null $param
+     * @param OsCadastro|null $osCadastro
      *
      * @return object
      * @throws GuzzleException
      */
-    public function alterarOS(?array $param = null): object
+    public function alterarOS(OsCadastro $osCadastro = null): object
     {
-        return $this->call("servicos/os/#AlterarOS", $param);
+        return $this->call("servicos/os/#AlterarOS", $osCadastro->toArray());
     }
 
     /**
