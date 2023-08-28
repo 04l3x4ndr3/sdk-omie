@@ -404,7 +404,7 @@ class ClientesListRequest
     public function toArray(): array
     {
         return array_filter([
-            "clientesFiltro" => $this->clientesFiltro,
+            "clientesFiltro" => isset($this->clientesFiltro) ? $this->clientesFiltro->toArray() : null,
             "pagina" => $this->pagina,
             "registros_por_pagina" => $this->registros_por_pagina,
             "apenas_importado_api" => $this->apenas_importado_api,
