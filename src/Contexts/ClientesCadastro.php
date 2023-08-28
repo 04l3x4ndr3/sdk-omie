@@ -22,9 +22,9 @@ class ClientesCadastro extends CallApi
     }
 
     /**
-     * @param ClientesListRequest|null $param
+     * @param ClientesListRequest|null $clientesListRequest
+     * @return object|array
      *
-     * @return object
      * @throws GuzzleException
      */
     public function listarClientes(?ClientesListRequest $clientesListRequest = null): object
