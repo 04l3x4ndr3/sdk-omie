@@ -74,4 +74,15 @@ class OrdemServico extends CallApi
         return $this->call("servicos/os/#ExcluirOS", $param);
     }
 
+    /**
+     * @param array|null $param
+     *
+     * @return object
+     * @throws GuzzleException
+     */
+    public function statusOS(?array $param = null): object
+    {
+        return $this->call("servicos/os/#StatusOS", $param);
+    }
+
 }
