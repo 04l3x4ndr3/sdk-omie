@@ -4,21 +4,21 @@ namespace O4l3x4ndr3\SdkOmie\Types;
 
 class ContaReceberLancarRecebimento
 {
-    private int $codigo_lancamento;
-    private string $codigo_lancamento_integracao;
-    private int $codigo_baixa;
-    private string $codigo_baixa_integracao;
-    private int $codigo_conta_corrente;
-    private string $codigo_conta_corrente_integracao;
-    private float $valor;
-    private float $juros;
-    private float $desconto;
-    private float $multa;
-    private string $data;
-    private string $observacao;
-    private string $bloqueado;
-    private string $conciliar_documento;
-    private string $nsu;
+    private ?int $codigo_lancamento;
+    private ?string $codigo_lancamento_integracao;
+    private ?int $codigo_baixa;
+    private ?string $codigo_baixa_integracao;
+    private ?int $codigo_conta_corrente;
+    private ?string $codigo_conta_corrente_integracao;
+    private ?float $valor;
+    private ?float $juros;
+    private ?float $desconto;
+    private ?float $multa;
+    private ?string $data;
+    private ?string $observacao;
+    private ?string $bloqueado;
+    private ?string $conciliar_documento;
+    private ?string $nsu;
 
     /**
      * @param int|null $codigo_lancamento
