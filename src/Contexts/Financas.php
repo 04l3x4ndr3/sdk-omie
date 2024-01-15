@@ -5,6 +5,7 @@ namespace O4l3x4ndr3\SdkOmie\Contexts;
 use GuzzleHttp\Exception\GuzzleException;
 use O4l3x4ndr3\SdkOmie\Configuration;
 use O4l3x4ndr3\SdkOmie\Helpers\CallApi;
+use O4l3x4ndr3\SdkOmie\Types\ContaReceberLancarRecebimento;
 use O4l3x4ndr3\SdkOmie\Types\MovimentoFinanceiro;
 
 class Financas extends CallApi
@@ -25,5 +26,19 @@ class Financas extends CallApi
     public function ListarMovimentos(MovimentoFinanceiro $param): object
     {
         return $this->call('financas/mf/#ListarMovimentos', $param->toArray());
+    }
+
+    /**
+     * LancarRecebimento method.
+     *
+     * This method performs the operation of launching a receivable.
+     *
+     * @param ContaReceberLancarRecebimento $param The parameter object containing the necessary data for the receivable launch.
+     * @return object The result of the operation.
+     * @throws GuzzleException
+     */
+    public function LancarRecebimento(ContaReceberLancarRecebimento $param): object
+    {
+        return $this->call('financas/contareceber/#LancarRecebimento', $param->toArray());
     }
 }
