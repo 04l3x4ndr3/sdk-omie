@@ -84,8 +84,9 @@ class CallApi
      * @return array|object
      * @throws GuzzleException
      */
-    public function call(string $endpoint, ?array $body = NULL, ?string $method='POST'): array|object
+    public function call(string $endpoint, ?array $body = NULL, ?string $method = 'POST'): array|object
     {
+        $data = [];
         $app_key = $this->credential['app_key'];
         $app_secret = $this->credential['app_secret'];
         $uri = explode('#', $endpoint);
@@ -93,6 +94,7 @@ class CallApi
 
         $client = new Client();
         $options = array_filter([
+            'http_errors' => false,
             'headers' => [
                 'Content-type' => 'application/json'
             ],
@@ -100,24 +102,26 @@ class CallApi
                 'app_key' => $app_key,
                 'app_secret' => $app_secret,
                 'call' => $call,
-                'param' => array_filter([$body], function($v){
+                'param' => array_filter([$body], function ($v) {
                     return !empty($v);
                 })
-            ], function ($v){
+            ], function ($v) {
                 return !is_null($v);
             })
         ]);
 
         $this->options = $options;
-
         $res = $client->request($method, "{$this->config->getUrl()}{$endpoint}", $options);
-        return json_decode($res->getBody());
+        $data = $res->getBody()->getContents();
+
+        return json_decode($data);
     }
 
     /**
      * @return array
      */
-    public function getOptions(){
+    public function getOptions()
+    {
         return $this->options;
     }
 

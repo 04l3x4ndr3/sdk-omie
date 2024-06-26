@@ -98,16 +98,19 @@ class ClientesListRequest
     private ?string $exibir_obs;
 
     /**
+     * @param ClientesFiltro|null $clientesFiltro
      * @param int|null $pagina
      * @param int|null $registros_por_pagina
      * @param string|null $apenas_importado_api
      */
     public function __construct(
-        ?int               $pagina = null,
-        ?int               $registros_por_pagina = null,
-        ?string            $apenas_importado_api = null
+        ?ClientesFiltro $clientesFiltro = null,
+        ?int            $pagina = null,
+        ?int            $registros_por_pagina = null,
+        ?string         $apenas_importado_api = null
     )
     {
+        $this->clientesFiltro = $clientesFiltro;
         $this->pagina = $pagina;
         $this->registros_por_pagina = $registros_por_pagina;
         $this->apenas_importado_api = $apenas_importado_api;
@@ -119,7 +122,6 @@ class ClientesListRequest
         $this->filtrar_por_hora_ate = null;
         $this->filtrar_apenas_inclusao = null;
         $this->filtrar_apenas_alteracao = null;
-        $this->clientesFiltro = null;
         $this->clientesPorCodigo = null;
         $this->exibir_caracteristicas = null;
         $this->exibir_obs = null;
@@ -402,6 +404,7 @@ class ClientesListRequest
     public function toArray(): array
     {
         return array_filter([
+            "clientesFiltro" => isset($this->clientesFiltro) ? $this->clientesFiltro->toArray() : null,
             "pagina" => $this->pagina,
             "registros_por_pagina" => $this->registros_por_pagina,
             "apenas_importado_api" => $this->apenas_importado_api,
@@ -413,7 +416,6 @@ class ClientesListRequest
             "filtrar_por_hora_ate" => $this->filtrar_por_hora_ate,
             "filtrar_apenas_inclusao" => $this->filtrar_apenas_inclusao,
             "filtrar_apenas_alteracao" => $this->filtrar_apenas_alteracao,
-            "clientesFiltro" => $this->clientesFiltro,
             "clientesPorCodigo" => $this->clientesPorCodigo,
             "exibir_caracteristicas" => $this->exibir_caracteristicas,
             "exibir_obs" => $this->exibir_obs,

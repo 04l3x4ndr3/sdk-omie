@@ -128,9 +128,9 @@ class ClientesFiltro
     private ?array $tags;
 
     /**
+     * @param string|null $cnpj_cpf
      * @param int|null $codigo_cliente_omie
      * @param string|null $codigo_cliente_integracao
-     * @param string|null $cnpj_cpf
      * @param string|null $razao_social
      * @param string|null $nome_fantasia
      * @param string|null $endereco
@@ -150,9 +150,9 @@ class ClientesFiltro
      * @param array|null $tags
      */
     public function __construct(
+        ?string $cnpj_cpf = null,
         ?int    $codigo_cliente_omie = null,
         ?string $codigo_cliente_integracao = null,
-        ?string $cnpj_cpf = null,
         ?string $razao_social = null,
         ?string $nome_fantasia = null,
         ?string $endereco = null,
@@ -172,9 +172,9 @@ class ClientesFiltro
         ?array  $tags = null
     )
     {
+        $this->cnpj_cpf = $cnpj_cpf;
         $this->codigo_cliente_omie = $codigo_cliente_omie;
         $this->codigo_cliente_integracao = $codigo_cliente_integracao;
-        $this->cnpj_cpf = $cnpj_cpf;
         $this->razao_social = $razao_social;
         $this->nome_fantasia = $nome_fantasia;
         $this->endereco = $endereco;
@@ -557,9 +557,9 @@ class ClientesFiltro
 
     public function toArray(): array {
         return array_filter([
+            "cnpj_cpf" => $this->cnpj_cpf,
             "codigo_cliente_omie" => $this->codigo_cliente_omie,
             "codigo_cliente_integracao" => $this->codigo_cliente_integracao,
-            "cnpj_cpf" => $this->cnpj_cpf,
             "razao_social" => $this->razao_social,
             "nome_fantasia" => $this->nome_fantasia,
             "endereco" => $this->endereco,
